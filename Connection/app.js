@@ -35,7 +35,7 @@ const pgp = require('pg-promise')();
   password: This the password for accessing the database.  You'll need to set a password USING THE PSQL TERMINAL THIS IS NOT A PASSWORD FOR POSTGRES USER ACCOUNT IN LINUX!
 
 **********************/
-// REMEMBER to chage the password
+// REMEMBER to chage the password 
 
 const dbConfig = {
 	host: 'localhost',
