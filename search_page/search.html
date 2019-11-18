@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="search.js"></script>
+	<!-- title can be changed by the search input (if needed) -->
+	<title>PEER Taught Search</title>
+</head>
+<body>
+	<!-- navbar start here -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<!-- set the hyperlink of navbar-barnd here -->
+		<a class="navbar-barnd" href="#">
+			<img src="https://imgur.com/y44K594.png" alt="" width="70">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<!-- set the hyperlink of home here -->
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<!-- set the hyperlink of dropdow-bar here -->
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<!-- set the hyperlink of profile here -->
+						<a class="dropdown-item" href="#">Profile</a>
+						<a class="dropdown-item" href="#">Login / Sign up</a>
+						<div class="dropdown-divider"></div>
+						<!-- set the hyperlink of ask questions here -->
+						<a class="dropdown-item" href="#">Ask My Questions</a>
+						<!-- set the hyperlink of existing questions here -->
+						<a class="dropdown-item" href="#">Find Questions</a>
+			        </div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- navbar end here -->
+	<div class="container">
+		<form>
+			<div class="form-row" style="margin-top: 25%" id="search_box">
+				<div class="form-group col-8">
+					<input type="text" class="form-control" id="search_input" placeholder="Search">
+				</div>
+				<div class="form-group col-2">
+					<select class="form-control" id="search_topic" placeholder>
+						<option selected>Select Topic</option>
+						<option>Math</option>
+						<option>Science</option>
+						<option>English</option>
+						<option>History</option>
+						<option>Engineering</option>
+						<option>Business</option>
+						<option>Arts</option>
+						<option>Other</option>
+					</select>
+				</div>
+				<div class="form-group col-2">
+					<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="search_begin()">
+						Search :)
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="container" id="search_result" style="visibility: hidden;">
+		<!-- report number of result here -->
+		<p>Find results</p><br>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th rowspan="2">Questions</th>
+				</tr>
+			</thead>
+			<tbody id="questions">
+				<!-- example output (should use nodejs to output the result) -->
+				<tr>
+					<th>
+						<p>This is an example question 1</p>
+						<p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+						</p>
+						<a href="#">View</a>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<p>This is an example question 2</p>
+						<p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+						</p>
+						<a href="#">View</a>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
