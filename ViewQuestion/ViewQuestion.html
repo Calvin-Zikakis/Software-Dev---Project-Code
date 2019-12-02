@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="search.js"></script>
+	<!-- title can be changed by the search input (if needed) -->
+	<title>PEER Taught Search</title>
+</head>
+<body>
+	<!-- navbar start here -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<!-- set the hyperlink of navbar-barnd here -->
+		<a class="navbar-barnd" href="#">
+			<img src="https://imgur.com/y44K594.png" alt="" width="70">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<!-- set the hyperlink of home here -->
+					<a class="nav-link" href="../homepage/home.html">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<!-- set the hyperlink of dropdow-bar here -->
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<!-- set the hyperlink of profile here -->
+						<a class="dropdown-item" href="../profile/profile.html">Profile</a>
+						<a class="dropdown-item" href="../Login Page/signup.html">Login / Sign up</a>
+						<div class="dropdown-divider"></div>
+						<!-- set the hyperlink of ask questions here -->
+						<a class="dropdown-item" href="../QuestionPage/question.html">Ask My Questions</a>
+						<!-- set the hyperlink of existing questions here -->
+						<a class="dropdown-item" href="../search_page/search.html">Find Questions</a>
+			        </div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    <!-- end of navbar code -->
+
+    <div class="container">
+        <br>
+        <div class="text-center">
+            <h1>Question Title Goes Here
+            </h1>
+            <br>
+            <br>
+            <p class="text-left"> sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text, sample text,</p>
+            <br>
+            <br>
+
+        </div>
+        <div class="container" id="asnwers" >
+                <!-- report number of result here -->
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Answers:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="answers">
+                        <!-- example output (should use nodejs to output the result) -->
+                        <tr>
+                            <th>
+                                <p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+                                </p>
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+                                </p>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        <div class="form-group">
+                <label for="comment">Your Answer:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>  
+        </div>
+
+        <div class="form-group">
+            <label for="usr">CU Email:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+
+        <div class="form-group">
+                <button id="submit_button" 
+                    onClick="onClickFunction()">Submit Answer.</button>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
