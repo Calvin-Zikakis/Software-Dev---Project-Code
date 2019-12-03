@@ -11,14 +11,11 @@ function openModal() {
 	// When the user starts to type something inside the password field
 	myInput.onkeyup = function() {
        console.log('helllooo')
-        
 
         var lowerCaseLetters = /[a-z]/g; 
         var upperCaseLetters = /[A-Z]/g; 
         var numbers = /[0-9]/g;
         var minLength = 8;
-
-
 
         // Validate lowercase letters
         if(myInput.value.match(lowerCaseLetters)) {             
@@ -72,7 +69,6 @@ function openModal() {
     }
 }
 
-
 function enableButton(letter, capital, number, length, match) {
    // TODO: Clear this function for students to implement    
    var button = document.getElementById('my_submit_button');
@@ -83,7 +79,6 @@ function enableButton(letter, capital, number, length, match) {
        }        
    }
 
-
 function onClickFunction() {
-    location.href = "../homepage/home.html";
+    location.href = "../homepage/home";
 }

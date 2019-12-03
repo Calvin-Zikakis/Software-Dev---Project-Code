@@ -105,6 +105,13 @@ app.get('/SearchPage/search', function(req,res){
 	});
 });
 
+
+app.get('/SearchPage/resultPage', function(req,res){
+	res.render('pages/SearchPage/resultPage',{
+		my_title: "Results"
+	});
+});
+
 app.get('/ViewQuestion/viewquestion', function(req,res){
 	res.render('pages/ViewQuestion/viewquestion', {
 		my_title: "View Question "

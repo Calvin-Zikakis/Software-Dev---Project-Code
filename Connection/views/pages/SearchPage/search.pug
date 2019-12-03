@@ -58,30 +58,7 @@ img.img-fluid(src='https://imgur.com/4zU1Yvw.jpg' style='width:100%' alt='image'
           option Arts
           option Other
       .form-group.col-2
-        button.btn.btn-primary(type='button' data-toggle='button' aria-pressed='false' autocomplete='off' onclick='search_begin()')
+        button.btn.btn-primary(type='button' data-toggle='button' aria-pressed='false' autocomplete='off' onclick="location.href='resultPage'")
           | Search :)
-#search_result.container(style='visibility: hidden;')
-  // report number of result here
-  p Find results
-  br
-  table.table.table-hover
-    thead
-      tr
-        th(rowspan='2') Questions
-    tbody#questions
-      // example output (should use nodejs to output the result)
-      tr
-        th
-          p This is an example question 1
-          p
-            | example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
-          a(href='../ViewQuestion/viewquestion') View
-      tr
-        th
-          p This is an example question 2
-          p
-            | example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
-          a(href='../ViewQuestion/viewquestion') View
-
 
 //include ../partials/footer.pug

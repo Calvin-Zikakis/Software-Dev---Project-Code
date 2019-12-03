@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>
+  	Search Results
+  </title>
+</head>
+<body>
+	<!-- navbar start here -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<!-- set the hyperlink of navbar-barnd here -->
+		<a class="navbar-barnd" href="#">
+			<img src="https://imgur.com/y44K594.png" alt="" width="70">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<!-- set the hyperlink of home here -->
+					<a class="nav-link" href="../homepage/home.html">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<!-- set the hyperlink of dropdow-bar here -->
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<!-- set the hyperlink of profile here -->
+						<a class="dropdown-item" href="../profile/profile.html">Profile</a>
+						<a class="dropdown-item" href="../Login Page/signup.html">Login / Sign up</a>
+						<div class="dropdown-divider"></div>
+						<!-- set the hyperlink of ask questions here -->
+						<a class="dropdown-item" href="../QuestionPage/question.html">Ask My Questions</a>
+						<!-- set the hyperlink of existing questions here -->
+						<a class="dropdown-item" href="../search_page/search.html">Find Questions</a>
+			        </div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  <!-- navbar end here -->
+
+	<div class="container">
+    <!-- report number of result here -->
+    <br>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+          <th rowspan="2">Related Questions</th>
+          <br>
+				</tr>
+			</thead>
+			<tbody id="questions">
+				<tr>
+					<th>
+						<p>This is an example question 1</p>
+						<p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+						</p>
+						<a href="../ViewQuestion/ViewQuestion.html">View</a>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<p>This is an example question 2</p>
+						<p>example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary example summary
+						</p>
+						<a href="../ViewQuestion/ViewQuestion.html">View</a>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
