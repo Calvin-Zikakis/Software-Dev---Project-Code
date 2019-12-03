@@ -22,8 +22,6 @@ const pug = require('pug'); // Add the 'pug' view engine
 //Create Database Connection
 const pgp = require('pg-promise')();
 
-
-
 /**********************
   
   Database Connection information
@@ -52,31 +50,31 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/')); // This line is necessary for us to use relative paths and access our resources directory
 
 app.get('/', (req,res)=>{
-	return res.redirect('/home');
+	return res.redirect('/HomePage/home');
 });
-app.get('/home', function(req, res) {
-	res.render('pages/home',{
+app.get('/HomePage/home', function(req, res) {
+	res.render('pages/HomePage/home',{
 		my_title:"Home Page"
 	});
 });
 
 
 
-app.get('/login', function(req, res) {
-	res.render('pages/login',{
+app.get('/LoginPage/login', function(req, res) {
+	res.render('pages/LoginPage/login',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
 });
 
-app.get('/signup', function(req, res) {
-	res.render('pages/signup',{
+app.get('/LoginPage/signup', function(req, res) {
+	res.render('pages/LoginPage/signup',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
 });
 
-app.post('/signup', function(req,res){
+app.post('/LoginPage/signup', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
 	res.render('pages/login');
@@ -87,10 +85,31 @@ app.post('/signup', function(req,res){
 	});
 
 });
+app.get('/Profile/profile', function(req,res){
+	res.render('pages/Profile/profile',{
+		my_title: "Profile Page"
+	});
 
+}); 
 
+app.get('/QuestionPage/question', function(req,res){
+	res.render('pages/QuestionPage/question', {
+		local_css: "question.css",
+		my_title: "Question"
+	});
+});
 
+app.get('/SearchPage/search', function(req,res){
+	res.render('pages/SearchPage/search',{
+		my_title: "Search"
+	});
+});
 
+app.get('/ViewQuestion/viewquestion', function(req,res){
+	res.render('pages/ViewQuestion/viewquestion', {
+		my_title: "View Question "
+	});
+});
 
 
 app.listen(3000, function(err){
