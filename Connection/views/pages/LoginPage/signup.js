@@ -72,7 +72,7 @@ function openModal() {
 function enableButton(letter, capital, number, length, match) {
    // TODO: Clear this function for students to implement    
    var button = document.getElementById('my_submit_button');
-   var condition = (letter.classList == "valid" && capital.classList == "valid" && number.classList == "valid" && length.classList == "valid" && match.classList == "valid"); // TODO: Replace false with the correct condition
+   var condition = (letter.classList == "valid" && capital.classList == "valid" && number.classList == "valid" && length.classList == "valid" && match.classList == "valid"); 
    
    if(condition) {      
            button.disabled = false;
