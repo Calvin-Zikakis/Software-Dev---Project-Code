@@ -31,7 +31,7 @@ function openModal() {
 
         // Validate capital letters        
         if(myInput.value.match(upperCaseLetters)) { 
-            capital.classList.remove("invalid"); 
+            capital.classList.remove("invalid");
             capital.classList.add("valid");
         } else {
             capital.classList.remove("valid");
