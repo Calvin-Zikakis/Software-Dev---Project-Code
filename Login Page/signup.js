@@ -85,5 +85,5 @@ function enableButton(letter, capital, number, length, match) {
 
 
 function onClickFunction() {
-    location.href = "../homepage/home.html";
+    location.href = "login.html";
 }

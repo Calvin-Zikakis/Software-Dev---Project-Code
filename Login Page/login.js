@@ -12,7 +12,7 @@ function openModal() {
     // add conditional in below statement
     confirmMyInput.onkeyup = function() {
                 // Validate password in database
-                if (confirmMyInput.value ==) //add this conditional to make sure the password is in the database.
+                if (confirmMyInput.value == ) //add this conditional to make sure the password is in the database.
                 {
                     var passEqualsConfPass = true;
 
@@ -34,9 +34,9 @@ function openModal() {
 
 function enableButton(password, email, confirmed) {
         //enable button if the password and email are in the database
-    }    
+    } 
 
 
 function onClickFunction() {
-    alert("Works")
+    location.href = "../profile.html";
 }
