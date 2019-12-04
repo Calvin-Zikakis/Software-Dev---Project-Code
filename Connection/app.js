@@ -78,11 +78,14 @@ app.post('/LoginPage/signup.html', function(req,res){
 	console.log(req.body);
 	alert(req.body)
 	alert("req.body")
+	alert("LOOK AT ME PLEASE")
+	console.log('I WORK');
+
 	res.render('/LoginPage/signup.html');
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
-		if(err) throw err
+		if(err) throw err;
 	});
 
 });
