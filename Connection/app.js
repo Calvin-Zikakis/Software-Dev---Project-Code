@@ -34,7 +34,14 @@ const pgp = require('pg-promise')();
 **********************/
 // REMEMBER to chage the password 
 
-const dbConfig = process.env.DATABASE_URL;
+const dbConfig = {
+	host: 'ec2-54-221-214-183.compute-1.amazonaws.com',
+	port: 5432,
+	database: 'dduosdsl53eu2b',
+	user: 'cfbopxmzjrchow',
+	password: '72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc'
+};
+
 let db = pgp(dbConfig);
 
 // set the view engine to ejs
