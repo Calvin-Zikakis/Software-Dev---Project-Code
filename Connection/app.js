@@ -121,10 +121,4 @@ app.get('/ViewQuestion/viewquestion', function(req,res){
 });
 
 
-app.listen(3000, function(err){
-
-	if(err) throw err;
-
-	console.log('3000 is the magic port');
-});
-
+app.listen(process.env.PORT);
