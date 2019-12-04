@@ -107,7 +107,7 @@ app.post('/LoginPage/signup', function(req,res){
 	res.render('/LoginPage/login');
 	
 
-	db.query("INSERT INTO user_info(Firstname,Lastname,Email,Password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
+	db.query("INSERT INTO user_info(firstname,lastname,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
 		if(err) throw err;
 	});
 
