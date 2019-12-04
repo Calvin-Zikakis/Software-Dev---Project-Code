@@ -55,7 +55,7 @@ app.get('/HomePage/home', function(req, res) {
 
 
 app.get('/LoginPage/login', function(req, res) {
-	res.render('/profile/profile',{
+	res.render('/LoginPage/login',{
 
 	});
 });
