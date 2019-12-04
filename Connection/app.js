@@ -17,7 +17,6 @@ const bodyParser = require('body-parser'); // Add the body-parser tool has been 
 app.use(bodyParser.json());              // Add support for JSON encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Add support for URL encoded bodies
 
-const pug = require('pug'); // Add the 'pug' view engine
 
 //Create Database Connection
 const pgp = require('pg-promise')();
@@ -35,18 +34,11 @@ const pgp = require('pg-promise')();
 **********************/
 // REMEMBER to chage the password 
 
-const dbConfig = {
-	host: 'localhost',
-	port: 5432,
-	database: 'site_directory',
-	user: 'postgres',
-	password: 'admin1234'
-};
-
+const dbConfig = process.env.DATABASE_URL;
 let db = pgp(dbConfig);
 
 // set the view engine to ejs
-app.set('view engine', 'pug');
+app.set('view engine', 'php');
 app.use(express.static(__dirname + '/')); // This line is necessary for us to use relative paths and access our resources directory
 
 app.get('/', (req,res)=>{
