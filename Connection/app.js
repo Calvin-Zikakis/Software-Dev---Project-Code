@@ -74,7 +74,7 @@ app.get('/LoginPage/signup', function(req, res) {
 	});
 });
 
-app.post('/LoginPage/signup', function(req,res){
+app.post('/LoginPage/signup.html', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
 	res.render('/LoginPage/login.html');
