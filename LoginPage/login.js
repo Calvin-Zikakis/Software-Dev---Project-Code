@@ -7,5 +7,5 @@ function openModal() {
 
 
 function onClickFunction() {
-    location.href = "../profile/profile.html";
+    location.href = "profile.html";
 }
