@@ -3,6 +3,7 @@ function openModal() {
     myInput.onkeyup = function() {
         console.log('helllooo')
     }
+    enableButton();
 }
 
 function enableButton() {
@@ -10,6 +11,7 @@ function enableButton() {
         var button = document.getElementById('my_submit_button');
         var myInput = document.getElementById("psw");
         var email = document.getElementByName("email");
+
         if (myInput.value != "" && email.value != ""){
             button.disabled = false;
         }
