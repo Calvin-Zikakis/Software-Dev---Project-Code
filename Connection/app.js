@@ -68,7 +68,7 @@ app.get('/LoginPage/login.html', function(req, res) {
 });
 
 app.get('/LoginPage/signup.html', function(req, res) {
-	res.render('/LoginPage/login.html',{
+	res.render('/LoginPage/signup.html',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
@@ -77,7 +77,7 @@ app.get('/LoginPage/signup.html', function(req, res) {
 app.post('/LoginPage/signup.html', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
-	res.render('/LoginPage/login.html');
+	res.render('/LoginPage/signup.html');
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
