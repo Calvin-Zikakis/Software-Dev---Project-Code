@@ -60,24 +60,24 @@ app.get('/HomePage/home', function(req, res) {
 
 
 
-app.get('/LoginPage/login.html', function(req, res) {
-	res.render('pages/LoginPage/login.html',{
+app.get('/LoginPage/login', function(req, res) {
+	res.render('/LoginPage/login',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
 });
 
-app.get('/LoginPage/signup.html', function(req, res) {
-	res.render('pages/LoginPage/signup.html',{
+app.get('/LoginPage/signup', function(req, res) {
+	res.render('/LoginPage/signup',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
 });
 
-app.post('/LoginPage/signup.html', function(req,res){
+app.post('/LoginPage/signup', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
-	res.render('pages/LoginPage/login.html');
+	res.render('/LoginPage/login');
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
@@ -86,14 +86,14 @@ app.post('/LoginPage/signup.html', function(req,res){
 
 });
 app.get('/Profile/profile', function(req,res){
-	res.render('pages/Profile/profile',{
+	res.render('/Profile/profile',{
 		my_title: "Profile Page"
 	});
 
 }); 
 
 app.get('/QuestionPage/question', function(req,res){
-	res.render('pages/QuestionPage/question', {
+	res.render('/QuestionPage/question', {
 		local_css: "question.css",
 		my_title: "Question"
 	});
