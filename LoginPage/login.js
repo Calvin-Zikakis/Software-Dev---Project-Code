@@ -7,10 +7,11 @@ function openModal() {
 
 function enableButton() {
         //enable button if the password and email are in the database
+        var button = document.getElementById('my_submit_button');
         var myInput = document.getElementById("psw");
         var email = document.getElementByName("email");
         if (myInput.value != "" && email.value != ""){
-            botton.disabled = false;
+            button.disabled = false;
         }
 
     } 
