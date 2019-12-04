@@ -65,7 +65,6 @@ app.get('/LoginPage/login', function(req, res) {
 //grab password associated to email if it exists
 app.post('/LoginPage/login', function(req,res){
 	console.log(req.body); 
-	console.log('I WORK');
 
 	var loginEmail = req.body.email;
 	var loginPassword = req.body.password; 
@@ -108,7 +107,7 @@ app.post('/LoginPage/signup', function(req,res){
 	res.render('/LoginPage/login');
 	
 
-	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
+	db.query("INSERT INTO user_info(Firstname,Lastname,Email,Password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
 		if(err) throw err;
 	});
 
@@ -132,7 +131,7 @@ app.post('/QuestionPage/question', function(req,res){
 	console.log(req.body);
 	res.render('/ViewQuestion/viewquestion'); //posts question and redirects
 	//inserts question into query
-	db.query("INSERT INTO questions(question_ask, question_info, question_tag, user_email) VALUES('"+req.body.title+"','"+req.body.details+"','"+req.body.tag+"','"+req.body.email+"')", function (err,res){
+	db.query("INSERT INTO questions(question_ask, question_info, question_tag, user_email) VALUES('"+req.body.title+"','"+req.body.details+"','"+req.body.tag+"','"+req.body.email+"');", function (err,res){
 		if(err) throw err;
 	});
 });
