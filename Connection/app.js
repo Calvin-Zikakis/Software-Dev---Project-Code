@@ -73,7 +73,7 @@ app.get('/LoginPage/signup.html', function(req, res) {
 	});
 });
 
-app.post('/LoginPage/signup.html', function(req,res){
+app.post('/LoginPage/signup', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
 	alert(req.body)
