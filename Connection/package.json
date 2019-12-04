@@ -1,6 +1,6 @@
 {
-    "name": "football-site",
-    "main": "server.js",
+    "name": "app",
+    "main": "app.js",
     "dependencies": {
         "express": "^4.6.1",
         "pg-promise": "^9.3.3",

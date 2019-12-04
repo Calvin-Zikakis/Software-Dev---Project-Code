@@ -17,7 +17,6 @@ const bodyParser = require('body-parser'); // Add the body-parser tool has been 
 app.use(bodyParser.json());              // Add support for JSON encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Add support for URL encoded bodies
 
-const pug = require('pug'); // Add the 'pug' view engine
 
 //Create Database Connection
 const pgp = require('pg-promise')();
@@ -36,11 +35,11 @@ const pgp = require('pg-promise')();
 // REMEMBER to chage the password 
 
 const dbConfig = {
-	host: 'localhost',
+	host: 'ec2-54-221-214-183.compute-1.amazonaws.com',
 	port: 5432,
-	database: 'site_directory',
-	user: 'postgres',
-	password: 'admin1234'
+	database: 'dduosdsl53eu2b',
+	user: 'cfbopxmzjrchow',
+	password: '72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc'
 };
 
 let db = pgp(dbConfig);
@@ -53,7 +52,7 @@ app.get('/', (req,res)=>{
 	return res.redirect('/HomePage/home');
 });
 app.get('/HomePage/home', function(req, res) {
-	res.render('pages/HomePage/home',{
+	res.render('/HomePage/home',{
 		my_title:"Home Page"
 	});
 });
@@ -61,7 +60,7 @@ app.get('/HomePage/home', function(req, res) {
 
 
 app.get('/LoginPage/login', function(req, res) {
-	res.render('pages/LoginPage/login',{
+	res.render('/LoginPage/login',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
@@ -71,6 +70,8 @@ app.get('/LoginPage/login', function(req, res) {
 //grab password associated to email if it exists
 app.post('/LoginPage/login', function(req,res){
 	console.log(req.body); 
+	console.log('I WORK');
+
 	var loginEmail = req.body.email;
 	var loginPassword = req.body.password; 
 	//res.render('pages/HomePage/home'); 
@@ -81,7 +82,7 @@ app.post('/LoginPage/login', function(req,res){
 
 	db.any(query)
 		.then(function(rows){
-			res.render('pages/Profile/profile',{
+			res.render('/Profile/profile',{
 				my_title: "Profile",
 				data: rows,
 			})
@@ -100,7 +101,7 @@ app.post('/LoginPage/login', function(req,res){
 });
 
 app.get('/LoginPage/signup', function(req, res) {
-	res.render('pages/LoginPage/signup',{
+	res.render('/LoginPage/signup',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
@@ -109,7 +110,7 @@ app.get('/LoginPage/signup', function(req, res) {
 app.post('/LoginPage/signup', function(req,res){
 	//console.log('req.body');
 	console.log(req.body);
-	res.render('pages/login');
+	res.render('/LoginPage/login');
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
@@ -119,14 +120,14 @@ app.post('/LoginPage/signup', function(req,res){
 });
 
 app.get('/Profile/profile', function(req,res){
-	res.render('pages/Profile/profile',{
+	res.render('/Profile/profile',{
 		my_title: "Profile Page"
 	});
 
 }); 
 
 app.get('/QuestionPage/question', function(req,res){
-	res.render('pages/QuestionPage/question', {
+	res.render('/QuestionPage/question', {
 		local_css: "question.css",
 		my_title: "Question"
 	});
@@ -134,7 +135,7 @@ app.get('/QuestionPage/question', function(req,res){
 
 app.post('/QuestionPage/question', function(req,res){
 	console.log(req.body);
-	res.render('pages/ViewQuestion/viewquestion'); //posts question and redirects
+	res.render('/ViewQuestion/viewquestion'); //posts question and redirects
 	//inserts question into query
 	db.query("INSERT INTO questions(question_ask, question_info, question_tag, user_email) VALUES('"+req.body.title+"','"+req.body.details+"','"+req.body.tag+"','"+req.body.email+"')", function (err,res){
 		if(err) throw err;
@@ -143,18 +144,18 @@ app.post('/QuestionPage/question', function(req,res){
 
 //match with title and topic for query 
 app.get('/SearchPage/search', function(req,res){
-	res.render('pages/SearchPage/search',{
+	res.render('/SearchPage/search',{
 		my_title: "Search"
 	});
 });
-app.get('SearchPage/resultPage',function(req,res){
-	res.render('pages/SearchPage/resultPage',{
+app.get('/SearchPage/resultPage',function(req,res){
+	res.render('/SearchPage/resultPage',{
 		my_title: "Search Result"
 	});
 });
 
 app.get('/ViewQuestion/viewquestion', function(req,res){
-	res.render('pages/ViewQuestion/viewquestion', {
+	res.render('/ViewQuestion/viewquestion', {
 		my_title: "View Question "
 	});
 });
