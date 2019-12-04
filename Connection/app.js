@@ -68,7 +68,7 @@ app.get('/LoginPage/login', function(req, res) {
 });
 
 app.get('/LoginPage/signup', function(req, res) {
-	res.render('pages/LoginPage/signup',{
+	res.render('pages/LoginPage/login.html',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
