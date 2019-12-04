@@ -60,24 +60,24 @@ app.get('/HomePage/home', function(req, res) {
 
 
 
-app.get('/LoginPage/login', function(req, res) {
-	res.render('pages/LoginPage/login',{
+app.get('/LoginPage/login.html', function(req, res) {
+	res.render('pages/LoginPage/login.html',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
 });
 
-app.get('/LoginPage/signup', function(req, res) {
-	res.render('pages/LoginPage/signup',{
+app.get('/LoginPage/signup.html', function(req, res) {
+	res.render('pages/LoginPage/signup.html',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
 });
 
-app.post('/LoginPage/signup', function(req,res){
+app.post('/LoginPage/signup.html', function(req,res){
 	console.log('req.body');
 	console.log(req.body);
-	res.render('pages/LoginPage/login');
+	res.render('pages/LoginPage/login.html');
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
