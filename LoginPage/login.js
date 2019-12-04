@@ -5,7 +5,7 @@ function openModal() {
 function enableButton() {
         //enable button if the password and email are in the database
         if (myInput != ""){
-            botton.disabled = false;
+            botton.disabled = true;
         }
 
     } 
