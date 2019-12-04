@@ -115,11 +115,16 @@ app.post('/LoginPage/signup', function(req,res){
 	res.render('/LoginPage/login');
 	
 
-	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
+	db.query('INSERT INTO user_info(firstName,lastName,email,password) VALUES(' + req.body.firstName + ',' + req.body.firstName + ',' + req.body.email + ',' +req.body.password + ');', function(err,res){
 		if(err) throw err;
 	});
 
 });
+
+/*
+"INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');"
+*/
+
 
 app.get('/Profile/profile', function(req,res){
 	res.render('/Profile/profile',{
