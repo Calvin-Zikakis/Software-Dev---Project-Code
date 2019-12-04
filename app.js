@@ -55,9 +55,8 @@ app.get('/HomePage/home', function(req, res) {
 
 
 app.get('/LoginPage/login', function(req, res) {
-	res.render('/profile/profile.html',{
-		local_css:"login.css", 
-		my_title:"Login Page"
+	res.render('/profile/profile',{
+
 	});
 });
 
@@ -65,7 +64,8 @@ app.get('/LoginPage/login', function(req, res) {
 //grab password associated to email if it exists
 app.post('/LoginPage/login', function(req,res){
 	console.log(req.body); 
-
+	res.render('/profile/profile');
+/*
 	var loginEmail = req.body.email;
 	var loginPassword = req.body.password; 
 	//res.render('pages/HomePage/home'); 
@@ -91,8 +91,9 @@ app.post('/LoginPage/login', function(req,res){
 				data: '',
 			})
 		})
-
+*/
 });
+
 
 app.get('/LoginPage/signup', function(req, res) {
 	res.render('/LoginPage/signup',{
