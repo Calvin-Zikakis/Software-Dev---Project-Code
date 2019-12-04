@@ -82,7 +82,7 @@ app.post('/LoginPage/signup.html', function(req,res){
 	
 
 	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
-		if(err) throw err;
+		if(err) throw err
 	});
 
 });
