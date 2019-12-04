@@ -11,7 +11,8 @@
 ***********************/
 
 const express = require('express'); // Add the express framework has been added
-let app = express();
+const app = express();
+const PORT = process.env.PORT
 
 const bodyParser = require('body-parser'); // Add the body-parser tool has been added
 app.use(bodyParser.json());              // Add support for JSON encoded bodies
@@ -34,6 +35,7 @@ const pgp = require('pg-promise')();
 **********************/
 // REMEMBER to chage the password 
 
+/** 
 const dbConfig = {
 	host: 'ec2-54-221-214-183.compute-1.amazonaws.com',
 	port: 5432,
@@ -41,11 +43,12 @@ const dbConfig = {
 	user: 'cfbopxmzjrchow',
 	password: '72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc'
 };
+*/
 
 let db = pgp(dbConfig);
 
 // set the view engine to ejs
-app.set('view engine', 'pug');
+app.set('view engine', 'php');
 app.use(express.static(__dirname + '/')); // This line is necessary for us to use relative paths and access our resources directory
 
 app.get('/', (req,res)=>{
@@ -161,10 +164,8 @@ app.get('/ViewQuestion/viewquestion', function(req,res){
 });
 
 
-app.listen(3000, function(err){
+app.listen(PORT, function(){
 
-	if(err) throw err;
-
-	console.log('3000 is the magic port');
+	console.log(PORT,' is the magic port');
 });
 
