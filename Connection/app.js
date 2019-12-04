@@ -60,15 +60,15 @@ app.get('/HomePage/home', function(req, res) {
 
 
 
-app.get('/LoginPage/login', function(req, res) {
-	res.render('/LoginPage/login',{
+app.get('/LoginPage/login.html', function(req, res) {
+	res.render('/LoginPage/login.html',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
 });
 
-app.get('/LoginPage/signup', function(req, res) {
-	res.render('/LoginPage/signup',{
+app.get('/LoginPage/signup.html', function(req, res) {
+	res.render('/LoginPage/signup.html',{
 		local_css:"signup.css", 
 		my_title:"Signup Page"
 	});
