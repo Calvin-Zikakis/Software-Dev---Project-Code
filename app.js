@@ -163,9 +163,5 @@ app.get('/ViewQuestion/viewquestion', function(req,res){
 	});
 });
 
-
-app.listen(PORT, function(){
-
-	console.log(PORT,' is the magic port');
-});
+app.listen(process.env.PORT);
 
