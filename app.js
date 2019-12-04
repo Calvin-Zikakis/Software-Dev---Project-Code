@@ -55,7 +55,7 @@ app.get('/HomePage/home', function(req, res) {
 
 
 app.get('/LoginPage/login', function(req, res) {
-	res.render('/LoginPage/login',{
+	res.render('/profile/profile.html',{
 		local_css:"login.css", 
 		my_title:"Login Page"
 	});
