@@ -77,7 +77,7 @@ app.post('/LoginPage/login', function(req,res){
 	var loginEmail = req.body.email;
 	var loginPassword = req.body.password; 
 	//res.render('pages/HomePage/home'); 
-	var query = "select * from user_info where '"+loginEmail+"'=email AND '"+loginPassword+"'=password";
+	var query = "select * from user_info where '"+loginEmail+"'=email AND '"+loginPassword+"'=password;";
 	//query for questions join on user_info
 	//query for answers join on user_info 
 
@@ -115,7 +115,7 @@ app.post('/LoginPage/signup', function(req,res){
 	res.render('/LoginPage/login');
 	
 
-	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"')", function(err,res){
+	db.query("INSERT INTO user_info(firstName,lastName,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
 		if(err) throw err;
 	});
 
