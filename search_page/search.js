@@ -13,8 +13,7 @@ function search_begin(){
 	}
 	else{
 		/* search log */
-		url = "/resultPage"
-		window.location(url);
+		location.href = "resultPage.html"
 	}
 }
 

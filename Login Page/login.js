@@ -38,5 +38,5 @@ function enableButton(password, email, confirmed) {
 
 
 function onClickFunction() {
-    location.href = "../profile.html";
+    location.href = "../profile/profile.html";
 }
