@@ -1,8 +1,24 @@
 {
-    "name": "node-ejs",
-    "main": "app.js",
-    "dependencies": {
-        "express": "^4.6.1",
-        "pg-promise": "^8.5.1"
-    }
+  "name": "peertaught",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Calvin-Zikakis/Software-Dev-Project-Code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Calvin-Zikakis/Software-Dev-Project-Code/issues"
+  },
+  "homepage": "https://github.com/Calvin-Zikakis/Software-Dev-Project-Code#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.14.0",
+    "pg-promise": "^10.3.1"
+  }
 }

@@ -8,6 +8,7 @@
 ***********************/
 
 const express = require('express'); // Add the express framework has been added
+const {Client} = require('pg');
 let app = express();
 
 const bodyParser = require('body-parser'); // Add the body-parser tool has been added
