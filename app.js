@@ -11,7 +11,7 @@ const express = require('express'); // Add the express framework has been added
 const {Client} = require('pg');
 
 const client = new Client({
-	connectionString: process.env.DATABASE_URL,
+	connectionString: "postgres://cfbopxmzjrchow:72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc@ec2-54-221-214-183.compute-1.amazonaws.com:5432/dduosdsl53eu2b",
 	ssl: true,
 });
 
