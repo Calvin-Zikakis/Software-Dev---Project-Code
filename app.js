@@ -118,7 +118,7 @@ app.get('/LoginPage/signup', function(req, res) {
 app.post('/LoginPage/signup', function(req,res){
 	//console.log('req.body');
 	console.log("HEYYYA");
-	res.render('/LoginPage/login');
+	res.render('/LoginPage/signup');
 	
 
 	client.query("INSERT INTO user_info(firstname,lastname,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
