@@ -117,7 +117,7 @@ app.get('/LoginPage/signup', function(req, res) {
 
 app.post('/LoginPage/signup', function(req,res){
 	//console.log('req.body');
-	console.log(req.body);
+	console.log("HEYYYA");
 	res.render('/LoginPage/login');
 	
 
