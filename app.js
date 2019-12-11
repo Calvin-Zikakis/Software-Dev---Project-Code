@@ -9,6 +9,16 @@
 
 const express = require('express'); // Add the express framework has been added
 const {Client} = require('pg');
+
+const client = new Client({
+	connectionString: process.env.DATABASE_URL,
+	ssl: true,
+});
+
+client.connect();
+
+
+
 let app = express();
 
 const bodyParser = require('body-parser'); // Add the body-parser tool has been added
@@ -29,7 +39,7 @@ const pgp = require('pg-promise')();
   password: This the password for accessing the database.  You'll need to set a password USING THE PSQL TERMINAL THIS IS NOT A PASSWORD FOR POSTGRES USER ACCOUNT IN LINUX!
 **********************/
 // REMEMBER to chage the password 
-
+/*
 const dbConfig = {
 	host: 'ec2-54-221-214-183.compute-1.amazonaws.com',
 	port: 5432,
@@ -37,6 +47,8 @@ const dbConfig = {
 	user: 'cfbopxmzjrchow',
 	password: '72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc'
 };
+*/
+
 
 let db = pgp(dbConfig);
 
