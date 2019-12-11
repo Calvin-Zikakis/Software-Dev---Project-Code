@@ -50,7 +50,7 @@ const dbConfig = {
 */
 
 
-let db = pgp(dbConfig);
+//let db = pgp(dbConfig);
 
 // set the view engine to ejs
 app.set('view engine', 'pug');
@@ -121,7 +121,7 @@ app.post('/LoginPage/signup', function(req,res){
 	res.render('/LoginPage/login');
 	
 
-	db.query("INSERT INTO user_info(firstname,lastname,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
+	client.query("INSERT INTO user_info(firstname,lastname,email,password) VALUES('"+req.body.firstName+"','"+req.body.lastName+"','"+req.body.email+"','"+req.body.password+"');", function(err,res){
 		if(err) throw err;
 	});
 
@@ -145,7 +145,7 @@ app.post('/QuestionPage/question', function(req,res){
 	console.log(req.body);
 	res.render('/ViewQuestion/viewquestion'); //posts question and redirects
 	//inserts question into query
-	db.query("INSERT INTO questions(question_ask, question_info, question_tag, user_email) VALUES('"+req.body.title+"','"+req.body.details+"','"+req.body.tag+"','"+req.body.email+"');", function (err,res){
+	client.query("INSERT INTO questions(question_ask, question_info, question_tag, user_email) VALUES('"+req.body.title+"','"+req.body.details+"','"+req.body.tag+"','"+req.body.email+"');", function (err,res){
 		if(err) throw err;
 	});
 });
