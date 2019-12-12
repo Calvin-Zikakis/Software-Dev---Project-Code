@@ -7,27 +7,15 @@
   Pg-Promise   - A database tool to help use connect to our PostgreSQL database
 ***********************/
 
-const express = require('express'); // Add the express framework has been added
-const {Client} = require('pg');
-
-const client = new Client({
-	connectionString: "postgres://cfbopxmzjrchow:72765cb500d3817ba5706c05b7a01f9e5d9777b211307e272ee71c658722c0cc@ec2-54-221-214-183.compute-1.amazonaws.com:5432/dduosdsl53eu2b",
-	ssl: true,
-});
-
-client.connect();
-
-
-
-let app = express();
-
-const bodyParser = require('body-parser'); // Add the body-parser tool has been added
+var express = require('express'); // Add the express framework has been added
+var app = express();
+var bodyParser = require('body-parser'); // Add the body-parser tool has been added
 app.use(bodyParser.json());              // Add support for JSON encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Add support for URL encoded bodies
 
 
 //Create Database Connection
-const pgp = require('pg-promise')();
+var pgp = require('pg-promise')();
 
 /**********************
   
@@ -52,8 +40,12 @@ const dbConfig = {
 
 //let db = pgp(dbConfig);
 
+
+
 // set the view engine to ejs
-app.set('view engine', 'pug');
+const dbConfig = process.env.DATABASE_URL;
+var db = pgp(dbConfig);
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/')); // This line is necessary for us to use relative paths and access our resources directory
 
 app.get('/', (req,res)=>{
