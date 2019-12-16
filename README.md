@@ -1,4 +1,5 @@
-Project Overview:
+## Project Overview:
+
 Peer Taught is a platform for students to get help and provide help to their fellow students in a wide variety of subjects.The platform is meant to be an additional tool for students to use in order to succeed in college. 
 
 To launch the platform, use this link here: https://peer-taught.herokuapp.com/
